@@ -1,426 +1,450 @@
-/*Smaller than small*/
-@media only screen and (max-width: 576px){
-    .site-title {
-        font-size: 0.9em;
-    }
-
-    p {
-        font-size: 1.2em;
-    }
-
-    .test_image-container {
-        height: 70vh !important;
-    }
-
-    .tt_sub-cont {
-        height: 90%;
-    }
-
-    .test_image-vertical {
-        width: auto;
-        max-height: 100%;
-    }
-}
-
-/*Smaller than medium screens*/
-@media only screen and (max-width: 768px){
-    .social_media-row {
-        display: none;
-    }
-
-    .site-title {
-        text-align: center;
-    }
-
-    .navbar {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        justify-items: center;
-        align-content: center;
-    }
-
-    .navbar-nav {
-        padding: 0;
-    }
-
-    .navbar-collapse {
-        border: #2A3027 0.5vh solid;
-    }
-
-    .nav-item {
-        display: flex;
-        margin: 0;
-      }
-
-      .nav-item a {
-        text-align: center;
-        width: 100%;
-      }
-
-      .navbar-toggler{
-        background-color: #2A3027;
-        margin-bottom: 2vh;
-        width: 40vw;
-      }
-
-    .test_text-container {
-        height: 80vh !important;
-    }
-}
-
-@media only screen and (min-width: 768px){
-    .nav-item:hover a {
-        color:#E8B130;
-    }
-}
-
-@media only screen and (max-width: 992px){
-    .test_image-vertical {
-        height: auto;
-        max-width: 100%;
-    }
-}
-
-
-/*larger than large screens*/
-@media only screen and (min-width: 992px){
-    p {
-        font-size: 1.1em;
-    }
-
-    a {
-        font-size: 1.1em;
-    }
-}
-
-@media only screen and (min-width: 1200px){
-    p {
-        font-size: 1.2em;
-    }     
-
-    .test_text-container {
-        padding-right: 8vw;
-    }
-
-    .test_text {
-        font-size: 1.5em;
-    }
-
-    .test-text {
-        font-size: 1.5em;
-    }
-
-    a {
-        font-size: 1.2em;
-    }
-}
-
+/*----------------------------Everything--------------------------------------------------------------------------------*/
 html {
-    height: 100%;
-}
-
-html::-webkit-scrollbar {
-    width: 15px;
-    background: black;
-}
-
-html::-webkit-scrollbar-button {
-    display: none;
-}
-
-html::-webkit-scrollbar-thumb {
-    background:#E8B130;
-    border-radius: 5px;
-}
-
-html::-webkit-scrollbar-track {
-    background: #2A3027;
-}
-
-* {
-    box-sizing: border-box;
-    font-family: 'Abel', sans-serif;
+    font-family: 'EB Garamond', serif;
+    color: black;
 }
 
 body {
-    background-color: white;
+    background-color: #4B9CD3;
+    cursor:default;
     -webkit-user-select: none; /* Webkit */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE 10 */
     /* Currently not supported in Opera but will be soon */
     -o-user-select: none;
     user-select: none;
-    height: 100%;
 }
 
 .btn {
-    background-color: #2A3027;
-    color: #D0DACC;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 3vh 0 0 0;
+    font-weight: 500;
+    border-radius: 15px;
+    border: none;
+}
+
+.btn:link {
+    background-color: #13294B;
+    color: white;
+}
+
+.btn:visited {
+    background-color: #13294B;
+    color: white;
     border: none;
 }
 
 .btn:hover {
-    background-color: #2A3027;
-    color: #E8B130;
-    cursor: pointer;
+    background-color: #13294B;
+    color: white;
 }
+
+.btn:active {
+    background-color: #13294B;
+    color: white;
+}
+
 
 /*----------------------------Header--------------------------------------------------------------------------------*/
-    
-.site-header {
-    text-transform: lowercase;
+.header_content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 0 2vh 0;
 }
-
-.name {
-    text-transform: lowercase;
-    color: #8f918e;
-}
-  
-    .name span {
-        color: #E8B130;
-    }
 
 .site-title {
     font-size: 1.9rem;
     padding-top: 1vh;
-}
-
-.navbar-collapse {
-    margin-left: 0;
-    background-color: #2A3027;
-    border-radius: 0 0 30px 30px;
-}
-
-.active a { 
-    color: #D0DACC;
-}
-
-/*I determined how to customize the navbar toggler using the following two websites:
-    https://www.geeksforgeeks.org/how-to-change-hamburger-toggler-color-in-bootstrap/
-    and
-    https://github.com/yui/yuicompressor/issues/274
-*/
-          
-.custom-toggler .navbar-toggler {
-    border-color: #2A3027;
-}
-
-.custom-toggler .navbar-toggler-icon {
-    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(208, 218, 204, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-    .nav-item {
-      text-align: center;
-    }
-
-        .nav-item a {
-            color: #D0DACC;
-        }
-
-        .nav-item a:hover {
-            color: #E8B130;
-        }
-
-    .nav-link {
-      font-size: 1.2rem;
-      color: #D0DACC;
-      border-top: solid #2A3027 1px;
-    }
-
-    .nav-link:hover {
-        border-top: solid #E8B130 1px;
-    }
-
-/*Social Media - Aside*/
-#social_media {
-    position:fixed;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-content: center;
-    padding: 0.25vh;
-    top: 3vh;
-    background-color: #2A3027;
-    left: 87vw;
-    border-radius: 1.5vh;
-    z-index: 30;
-  }
-
-  #social_media i {
-    padding: 0.75vh;
-    text-align: center;
-    font-size: 1.2rem;
-    color: #D0DACC;
-  }
-  
-  #social_media i:hover{
-    cursor:pointer;
-    color: #E8B130;
-  }
-
-/*--------------------------Main-----------------------------------------------------------------------------------*/
-/*Gallery---------------*/
-/*
-.gallery {
-    background-color: #53614D;
-    height: 70vh;
-    display: flex;
-    overflow: auto;
-}
-
-.gallery::-webkit-scrollbar {
-    height: 1.5vh;
-}
-
-.gallery::-webkit-scrollbar-button {
-    display: none;
-}
-
-.gallery::-webkit-scrollbar-thumb {
-    background-color: #E8B130;
-}
-
-.gallery::-webkit-scrollbar-track-piece {
-    background-color: #53614D;
-}
-
-.gallery-img {
-    height: 100%;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
-}
-*/
-
-/*Features -----------------*/
-.feature_background_image {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: hsla(255, 100%, 100%, 0.9);
-    background-blend-mode:overlay;
-}
-
-.features {
-    display: flex;
-    flex-flow: column wrap;
-    justify-items: center;
-    align-items: center;
-}
-
-.feature_info {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-.feature_img {
-    height: auto;
-}
-
-
-/*Testimonials -----------*/
-.person {    
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.test_text-container {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: center;
-    justify-content: center;
-    height: 60vh;
-}
-
-.tt_sub-cont {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: center;
-    justify-content: center;
-} 
-
-.test_image-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
-    height: 80vh;
-}
-
-.test_image-vertical {
-    width: auto;
-    max-height: 90%;
-}
-
-/*Other Clients ---------------*/
-#other_clients {
-    background-color: #2A3027;
-}
-
-#other_clients p {
     color: white;
 }
 
-/*----------------------------Footer--------------------------------------------------------------------------------*/
+    .site-title span {
+        font-size: 1.7rem;
+    }
 
-footer .btn {
-    background-color: #2A3027;
-    color: #D0DACC;
-}
 
-footer .btn:hover {
-    background-color: #2A3027;
-    color: #E8B130;
-    cursor: pointer;
-}
-
-.footer {
-    border-top: 1px #53614D solid;
-    font-size: 0.8rem;
-}
-
-.footer-content {
+/*----------------------------Main--------------------------------------------------------------------------------*/
+.main_content {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
-    align-content: center;
-}
-
-.footer-info {
-    text-align: center;
-}
-
-.footer-button {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: center;
     justify-content: center;
+    align-items: center;
+    padding: 2vh 0 2vh 0;
+    background-color: white;
 }
 
-/*Social Media - Footer*/
-.footer-social_media {
-    position:relative;
-    background-color: #2A3027;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-content: center;
-  }
+.section_title {
+    font-size: 18pt;
+    color: #4B9CD3;
+}
 
-  .footer-social_media i {
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    padding-right: 1.5vw;
-    padding-left: 1.5vw;
-    text-align: center;
-    font-size: 1.5rem;
-    color: #D0DACC;
-  }
-  
-  .footer-social_media i:hover{
-    cursor:pointer;
-    color: #E8B130;
-  }
+    .resources {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 5vh 0 5vh 0;
+    }
+
+        .resource_addition {
+            color: #151515;
+        }
+
+    
+
+
+#unc:link {
+background-color: #4B9CD3;
+color: white;
+}
+
+    #unc:visited {
+    background-color: #4B9CD3;
+    color: white;
+    border: none;
+    }
+
+    #unc:hover {
+    background-color: #4B9CD3;
+    color: white;
+    }
+
+    #unc:active {
+    background-color: #4B9CD3;
+    color: white;
+    }
+
+
+
+
+
+#ecu:link {
+background-color: #592A8A;
+color: #FEC923;
+}
+
+    #ecu:visited {
+    background-color: #592A8A;
+    color: #FEC923;
+    border: none;
+    }
+
+    #ecu:hover {
+    background-color: #592A8A;
+    color: #FEC923;
+    }
+
+    #ecu:active {
+    background-color: #592A8A;
+    color: #FEC923;
+    }
+
+
+
+
+
+#vcom:link {
+background-color: #C45400;
+color: white;
+}
+
+    #vcom:visited {
+    background-color: #C45400;
+    color: white;
+    border: none;
+    }
+
+    #vcom:hover {
+    background-color: #C45400;
+    color: white;
+    }
+
+    #vcom:active {
+    background-color: #C45400;
+    color: white;
+    }
+
+
+
+#lu:link {
+    background-color: #0A254E;
+    color: white;
+    }
+    
+    #lu:visited {
+    background-color: #0A254E;
+    color: white;
+    border: none;
+    }
+    
+    #lu:hover {
+    background-color: #0A254E;
+    color: white;
+    }
+    
+    #lu:active {
+    background-color: #0A254E;
+    color: white;
+    }
+
+
+    
+
+#etsu:link {
+    background-color: #FFC72C;
+    color: #041E42;
+    }
+    
+    #etsu:visited {
+    background-color: #FFC72C;
+    color: #041E42;
+    border: none;
+    }
+    
+    #etsu:hover {
+    background-color: #FFC72C;
+    color: #041E42;
+    }
+    
+    #etsu:active {
+    background-color: #FFC72C;
+    color: #041E42;
+    }
+
+    
+
+#usc:link {
+    background-color: #73000A;
+    color: white;
+    }
+    
+    #usc:visited {
+    background-color: #73000A;
+    color: white;
+    border: none;
+    }
+    
+    #usc:hover {
+    background-color: #73000A;
+    color: white;
+    }
+    
+    #usc:active {
+    background-color: #73000A;
+    color: white;
+    }
+
+    
+
+#wake:link {
+    background-color: #8C6D20;
+    color: white;
+    }
+    
+    #wake:visited {
+    background-color: #8C6D20;
+    color: white;
+    border: none;
+    }
+    
+    #wake:hover {
+    background-color: #8C6D20;
+    color: white;
+    }
+    
+    #wake:active {
+    background-color: #8C6D20;
+    color: white;
+    }
+
+    
+
+#camp:link {
+    background-color: #EA7215;
+    color: white;
+    }
+    
+    #camp:visited {
+    background-color: #EA7215;
+    color: white;
+    border: none;
+    }
+    
+    #camp:hover {
+    background-color: #EA7215;
+    color: white;
+    }
+    
+    #camp:active {
+    background-color: #EA7215;
+    color: white;
+    }
+
+    
+
+#duke:link {
+    background-color: #00539B;
+    color: white;
+    }
+    
+    #duke:visited {
+    background-color: #00539B;
+    color: white;
+    border: none;
+    }
+    
+    #duke:hover {
+    background-color: #00539B;
+    color: white;
+    }
+    
+    #duke:active {
+    background-color: #00539B;
+    color: white;
+    }
+
+
+
+#keck:link {
+    background-color: #990000;
+    color: white;
+    }
+    
+    #keck:visited {
+    background-color: #990000;
+    color: white;
+    border: none;
+    }
+    
+    #keck:hover {
+    background-color: #990000;
+    color: white;
+    }
+    
+    #keck:active {
+    background-color: #990000;
+    color: white;
+    }
+
+
+
+
+#med_sc:link {
+    background-color: #990000;
+    color: white;
+    }
+    
+    #med_sc:visited {
+    background-color: #990000;
+    color: white;
+    border: none;
+    }
+    
+    #med_sc:hover {
+    background-color: #990000;
+    color: white;
+    }
+    
+    #med_sc:active {
+    background-color: #990000;
+    color: white;
+    }
+
+
+
+#uv:link {
+    background-color: #E57200;
+    color: white;
+    }
+    
+    #uv:visited {
+    background-color: #E57200;
+    color: white;
+    border: none;
+    }
+    
+    #uv:hover {
+    background-color: #E57200;
+    color: white;
+    }
+    
+    #uv:active {
+    background-color: #E57200;
+    color: white;
+    }
+
+
+
+#evms:link {
+    background-color: #1F7F9B;
+    color: white;
+    }
+    
+    #evms:visited {
+    background-color: #1F7F9B;
+    color: white;
+    border: none;
+    }
+    
+    #evms:hover {
+    background-color: #1F7F9B;
+    color: white;
+    }
+    
+    #evms:active {
+    background-color: #1F7F9B;
+    color: white;
+    }
+
+
+
+#vt:link {
+    background-color: #C64600;
+    color: white;
+    }
+    
+    #vt:visited {
+    background-color: #C64600;
+    color: white;
+    border: none;
+    }
+    
+    #vt:hover {
+    background-color: #C64600;
+    color: white;
+    }
+    
+    #vt:active {
+    background-color: #C64600;
+    color: white;
+    }
+
+    
+
+
+
+#ut:link {
+    background-color: #C64600;
+    color: white;
+    }
+    
+    #ut:visited {
+    background-color: #C64600;
+    color: white;
+    border: none;
+    }
+    
+    #ut:hover {
+    background-color: #C64600;
+    color: white;
+    }
+    
+    #ut:active {
+    background-color: #C64600;
+    color: white;
+    }
